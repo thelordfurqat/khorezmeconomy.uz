@@ -1,0 +1,26 @@
+.ibox-title-hlp{
+	background-color: #1ab394;
+	color: white;
+	border-color: white;
+}
+.ibox-title-hlp2{
+	background-color: #23c6c8;
+	color: white;
+	border-color: white;
+}
+.ibox-title-hlp3{
+	background-color: #ed5565;
+	color: white;
+	border-color: white;
+}
+.ibox-tools-hlp a {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #FFFFFF;
+}
+.img-circle-hlp{
+	border-radius: 20px;
+}
+.address-hlp{
+	margin-bottom: 0px;
+}
