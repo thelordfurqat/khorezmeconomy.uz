@@ -1,0 +1,182 @@
+.survey label{
+    display: table;
+    font-weight: normal;
+}
+.gallery-item figure img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.gallery-item{
+    margin-bottom: 10px;
+}
+.gallery-item figure .caption{
+    background: rgba(0,0,0, 0.5);
+    color: #ffffff;
+    padding: 8px;
+    padding-top: 5px;
+    height: 34px;
+    line-height: 1.7;
+    position: relative;
+    bottom: 34px;
+    overflow: hidden;
+    font-size: 14px;
+    width: 200px;
+}
+.gallery-item a{
+    text-decoration: none;
+}
+.gallery-item figcaption{
+    background: rgba(0,0,0, 0.5);
+    color: #FFFFFF;
+    position: absolute;
+    top:0;
+    width: 200px;
+    height: 200px;
+    display: none;
+    padding: 3px;
+}
+.gallery-item figcaption p{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.gallery-item a:hover figcaption{
+    display: table;
+}
+.video-item a{
+    text-align: center;
+}
+.video-item{
+    margin-bottom: 10px;
+}
+.video-item  figure img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.poll-item-row{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+.grayscale{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.blackscale{
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+.sitemap ul{
+    padding-left: 40px;
+}
+.sitemap .menu-links-sitemap{
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+}
+.special-abilities{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    border:1px solid #bbbbbb;
+    right: 25%;
+    text-align: center;
+    z-index: 5;
+    display: none;
+    font-size: 16px !important;
+    padding-top: 5px;
+    background-color: #FFFFFF;
+}
+.special-abilities a{
+    color: #444;
+    font-size: 16px !important;
+    margin: 2px 2px;
+}
+.special-abilities a img{
+    width: 20px;
+    height: auto;
+    display: inline-block;
+}
+.special-abilities .row{
+    margin: 0;
+    font-size: 16px !important;
+}
+.special-abilities, .special-abilities .row, .special-abilities .row a, .special-abilities .row a img{
+    background-color: #FFFFFF !important;
+    color: #444 !important;
+}
+/*Voice assistant*/
+.playtts{
+    position: absolute;
+}
+.playtts .butt-playtts{
+    border: none;
+    background: none;
+    padding: 0;
+}
+.playtts .butt-playtts img{
+    width: 45px;
+}
+#backToTop img{
+    width: 50px;
+    position: fixed;
+    bottom: 6%;
+    right: 2%;
+    z-index: 5;
+}
+#backToTop{
+    display: none;
+    z-index: 5;
+}
+.mini_modal{
+    min-height: 320px;
+    max-height: 450px;
+    height: auto;
+}
+.mini_modal_title{
+    font-size: 16px;
+}
+.mini_modal img{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    float: left;
+}
+.img_modal_dep{
+    object-fit: contain;
+}
+.survey-progress{
+    margin-bottom: 0px;
+}
+.survey-numbers-title{
+    margin-bottom: 0px;
+    text-align: right;
+}
+.test-mode{
+    background: rgba(255,255,255,0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 6px 50px;
+    padding-bottom: 0;
+    z-index: 5;
+}
+.test-mode marquee{
+    color: #A42424;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-style: italic;
+}
+.old-version-of-site-link{
+    color: #FFFFFF;
+}
+table, td, th {
+    border: 1px solid #dddddd;
+    padding: 10px;
+}

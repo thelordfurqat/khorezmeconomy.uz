@@ -32,6 +32,9 @@ class AppAsset extends AssetBundle
 //        'css/demo.css',
         'css/font-awesome.css',
         'js/gspeech/gspeech.css',
+        'css/common.css',
+        'css/design-2.css',
+//        'css/style-1.css',
     ];
     public $js = [
         'js/jquery.js',
@@ -40,7 +43,7 @@ class AppAsset extends AssetBundle
         'scripts/jquery-number/jquery.number.min.js',
         'scripts/owlcarousel/dist/owl.carousel.min.js',
         'scripts/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'scripts/easescroll/jquery.easeScroll.js',
+//        'scripts/easescroll/jquery.easeScroll.js',
         'scripts/sweetalert/dist/sweetalert.min.js',
         'scripts/toast/jquery.toast.min.js',
 //        'js/demo.js',
