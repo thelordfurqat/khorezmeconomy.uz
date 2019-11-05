@@ -77,7 +77,7 @@ AppAsset::register($this);
                         <a href="<?= Yii::$app->urlManager->createUrl(['site/index'])?>" class="pull-left">
                             <img src="/logo.png" alt="XorazmDon logo" style="height:80px; width:auto">
                         </a>
-                        <a href="<?= Yii::$app->urlManager->createUrl(['site/index'])?>" class="pull-right" style="font-size:2em">Хоразм дон маҳсулотлари<br> <span>Аксиядорлик жамияти</span></a>
+                        <a href="<?= Yii::$app->urlManager->createUrl(['site/index'])?>" class="pull-right" style="font-size:2em">Хоразм вилояти Иқтисодиёт<br> <span> ва Саноат бош бошқармаси</span></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
