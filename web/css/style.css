@@ -1845,7 +1845,7 @@ article footer .btn-primary:focus {
   height: 55px;
   width: 100%;
   line-height: 23px;
-  background-color: #FFFFFF;
+  /*background-color: #FFFFFF;*/
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
 }
@@ -2204,7 +2204,7 @@ section .container {
   width: 300px;
   height: 195px;
   overflow: hidden;
-  background-color: #000;
+  /*background-color: #000;*/
   float: left;
   display: inline-block;
   margin-bottom: 0;

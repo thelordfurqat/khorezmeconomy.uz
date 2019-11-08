@@ -21,7 +21,7 @@
              * Time: 21:23
              */
 
-            echo \app\components\MenuBuilder::generate('map');
+            echo \app\components\MenuBuilder1::generate('map');
 
 
 

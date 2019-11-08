@@ -137,7 +137,7 @@ class SiteController extends Controller
             return $this->render('view',[
                 'model'=>$model,
                 'code'=>$code,
-                'sitetitle'=>$model->name. ' | xivaolimpia.uz'
+                'sitetitle'=>$model->name
             ]);
         }else{
             throw new NotFoundHttpException();
@@ -148,7 +148,7 @@ class SiteController extends Controller
 
 
         return $this->render('sitemap',[
-            'sitetitle'=>'Сайт харитаси  | xivaolimpia.uz'
+            'sitetitle'=>'Сайт харитаси'
         ]);
     }
 
@@ -176,7 +176,7 @@ class SiteController extends Controller
             'model' => $models,
             'pages' => $pages,
             'code'=>$code,
-            'sitetitle'=> $sitetitle.' | xivaolimpia.uz',
+            'sitetitle'=> $sitetitle,
             'catname'=>$sitetitle,
         ]);
 
@@ -198,7 +198,7 @@ class SiteController extends Controller
             return $this->render('page',[
                 'model'=>$model,
                 'code'=>$code,
-                'sitetitle'=>$model->name .' | xivaolimpia.uz'
+                'sitetitle'=>$model->name
             ]);
         }else{
             throw new NotFoundHttpException();
@@ -255,7 +255,7 @@ class SiteController extends Controller
         }
         return $this->render('contact', [
             'model' => $model,
-            'sitetitle'=>"Боғланиш | xivaolimpia.uz"
+            'sitetitle'=>"Боғланиш"
         ]);
     }
 

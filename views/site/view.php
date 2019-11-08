@@ -17,8 +17,26 @@
 
 
         <div class="short-text">
+            <h5><?=$model->preview?></h5>
+            <div class="owl-item active" style="width: 720px;"><div class="item">
+                    <article class="featured" style="height: 350px">
+                        <div class="overlay"></div>
+                        <figure style="background-image: url(&quot;<?=Yii::$app->homeUrl?>uploads/<?=$model->image?>&quot;); background-size: cover; background-repeat: no-repeat; background-position: center center;">
 
+                        </figure>
+                        <div class="details">
+                            <div class="time"><?= $this->render('_date',['date'=>$model->created])?></div>
+<!--                            <div class="time">Ноябрь 19, 2018</div>-->
+                        </div>
+                    </article>
+                </div></div>
             <?= \yii\helpers\Html::decode($model->detail) ?>
+
+<!--            --><?php
+//            echo '<pre>';
+//            print_r($model);
+//            echo '</pre>';
+//            ?>
 
         </div>
 

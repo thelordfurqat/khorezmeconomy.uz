@@ -12,7 +12,7 @@ use app\models\Category;
 use app\models\Language;
 use yii\base\Widget;
 use Yii;
-class MenuBuilder extends Widget{
+class MenuBuilder1 extends Widget{
 
     private static $pageview = 'site/page', $newsview= 'site/news', $codename = 'code', $menuname = '';
 
@@ -25,7 +25,7 @@ class MenuBuilder extends Widget{
         return $res;
     }
 
-    public static function generate($menu = null, $params=null){
+    public static function generate($menu, $params=null){
         if($params['pageview']){
             static::$pageview = $params['pageview'];
         }
@@ -43,8 +43,8 @@ class MenuBuilder extends Widget{
         }
 
 
-        $result = '<ul id="menu-main-menu" class="menu">
-                    
+        $result = '<ul class="nav-list">
+                    <li class="for-tablet nav-title"><a>Menu</a></li>
 ';
 
             $result = static::generateItems($result);
@@ -65,7 +65,6 @@ class MenuBuilder extends Widget{
                 continue;
             }
             if($item->parent_id == 1){
-                $target = "";
                 if(Category::find()->where(['parent_id'=>$item->id])->andWhere(['status'=>1])->count()>0){
                     $target = "";
                     if($item->page_id == 0){
@@ -77,9 +76,10 @@ class MenuBuilder extends Widget{
                             if($a == '-homeurl'){
                                 $url = Yii::$app->urlManager->createUrl(['site/index']);
                             }else{
-                                $target = "_blank";
                                 if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p'){
-                                    $url = substr($a,1, strlen($a)-1);
+                                    $target = "_blank";
+//                                    $url = "http://".substr($a,1, strlen($a)-1);
+                                    $url = substr($a,1,strlen($a)-1);
                                 }else{
                                     $url = substr($a,1, strlen($a)-1);;
                                 }
@@ -96,7 +96,6 @@ class MenuBuilder extends Widget{
                             $res = $res . '</ul></li>';
                 }else{
                     $target = "";
-                    $url="#";
                     if($item->page_id == 0){
                         $url = Yii::$app->urlManager->createUrl([static::$newsview,static::$codename=>$item->code]);
                     }elseif($item->page_id == -1){
@@ -105,9 +104,9 @@ class MenuBuilder extends Widget{
                             if($a == '-homeurl'){
                                 $url = Yii::$app->urlManager->createUrl(['site/index']);
                             }else{
-
-                                if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p'){
-                                    $target = "_blank";
+                                $target = "_blank";
+                                if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p' and $a[5]==':'){
+//                                    $url = "http://".substr($a,1, strlen($a)-1);
                                     $url = substr($a,1, strlen($a)-1);
                                 }else{
                                     $url = Yii::$app->urlManager->createUrl([substr($a,1, strlen($a)-1)]);
@@ -127,26 +126,25 @@ class MenuBuilder extends Widget{
     public static function generateSubItem($res,$parent_id){
 
         foreach (Category::find()->where(['parent_id'=>$parent_id])->all() as $item ){
-            $url = "#";
-            $target = "";
             if($item->status != 1){
                 continue;
             }
             if($item->page_id == 0){
                 $url = Yii::$app->urlManager->createUrl([static::$newsview,static::$codename=>$item->code]);
             }elseif($item->page_id == -1){
-				$target = "";
                 $url = '#';
                 $a = $item->code;
                 if($a[0] =='-'){
                     if($a == '-homeurl'){
                         $url = Yii::$app->urlManager->createUrl(['site/index']);
                     }else{
-                        $target = "_blank";
                         if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p'){
+//                            $url = "http://".substr($a,1, strlen($a)-1);
+                            $target = "_blank";
+
                             $url = substr($a,1, strlen($a)-1);
                         }else{
-                            $url = Yii::$app->urlManager->createUrl([substr($a,1, strlen($a)-1)]);
+                            $url = substr($a,1, strlen($a)-1);;
                         }
                     }
                 }
@@ -154,7 +152,7 @@ class MenuBuilder extends Widget{
                 $url = Yii::$app->urlManager->createUrl([static::$pageview,static::$codename=>$item->code]);
             }
 
-            $res = $res . '<li class=""><a href="'.$url.'" target="'.$target.'">'.$item->name.'</a></li>';
+            $res = $res . '<li class=""><a href="'.$url.'">'.$item->name.'</a></li>';
         }
 
         return $res;
@@ -190,7 +188,6 @@ class MenuBuilder extends Widget{
                         $url = Yii::$app->urlManager->createUrl([static::$newsview,static::$codename=>$item->code]);
                     }elseif($item->page_id == -1){
                         $url = '#';
-                        $target = "";
                         $a = $item->code;
                         if($a[0] =='-'){
                             if($a == '-homeurl'){
@@ -198,9 +195,10 @@ class MenuBuilder extends Widget{
                             }else{
                                 $target = "_blank";
                                 if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p'){
+//                                    $url = "http://".substr($a,1, strlen($a)-1);
                                     $url = substr($a,1, strlen($a)-1);
                                 }else{
-                                    $url = Yii::$app->urlManager->createUrl([substr($a,1, strlen($a)-1)]);
+                                    $url = substr($a,1, strlen($a)-1);;
                                 }
                             }
                         }
@@ -224,7 +222,8 @@ class MenuBuilder extends Widget{
                                 $url = Yii::$app->urlManager->createUrl(['site/index']);
                             }else{
                                 $target = "_blank";
-                                if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p'){
+                                if($a[1]=='h' and $a[2]=='t' and $a[3] == 't' and $a[4] == 'p' and $a[5]==':'){
+//                                    $url = "http://".substr($a,1, strlen($a)-1);
                                     $url = substr($a,1, strlen($a)-1);
                                 }else{
                                     $url = Yii::$app->urlManager->createUrl([substr($a,1, strlen($a)-1)]);

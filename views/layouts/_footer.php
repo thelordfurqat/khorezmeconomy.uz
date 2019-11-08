@@ -11,7 +11,7 @@
                             <img src="/logo.png" class="img-responsive" alt="Logo">
                         </figure>
                         <p class="brand-description">
-                            "Хоразм дон маҳсулотлари" Аксиядорлик жамияти
+                            Хоразм вилояти Иқтисодиёт ва саноат бош бошқармаси
                         </p>
 
                     </div>
@@ -22,7 +22,7 @@
                 <div class="block">
                     <h1 class="block-title">Манзил</h1>
                     <div class="block-body">
-                        <p>Хоразм вилояти Урганч туман Чоткўпир қишлоғи</p>
+                        <p>Хоразм вилояти Урганч шахар ал-Хоразмий кўча 23-уй</p>
 
                     </div>
                 </div>
@@ -83,12 +83,7 @@
                 <div class="block">
                     <h1 class="block-title">Сайт ҳақида</h1>
                     <div class="block-body">
-                        <article>
-                            <a href="http://ictcenter.uz" target="_blank">
-                                <img src="/aktlogo.png" alt="akt markaz">
-                            </a>
-                        </article>
-                        <br>
+
                         <p style="color:#fff">Сайт Yii2 фреймворкда яратилди.</p>
 
                         <ul class="social trp">
@@ -161,9 +156,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="copyright" style="margin-top:0;">
-                    COPYRIGHT &copy; "Хоразм дон маҳсулотлари" АЖ ALL RIGHT RESERVED.
+                    COPYRIGHT &copy; Хоразм вилояти Иқтисодиёт ва саноат бош бошқармаси ALL RIGHT RESERVED.
                     <div>
-                        Ушбу сайтдан олинган маълумотлардан фойдаланишда, "Хоразм дон маҳсулотлари" АЖ раймий сайтидан олинганлиги кўрсатиб ишлатилиши шарт.
+                        Ушбу сайтдан олинган маълумотлардан фойдаланишда, "Хоразм вилояти Иқтисодиёт ва саноат бош бошқармаси" раймий сайтидан олинганлиги кўрсатиб ишлатилиши шарт.
                     </div>
                 </div>
             </div>
